@@ -6,6 +6,9 @@ public class Main {
     /*The Main class is responsible for starting the application.
      It create a StoreManager instance to be able to store products.*/
 
+    StoreManager storeManager = new StoreManager();
+
+
 
     }
 }
