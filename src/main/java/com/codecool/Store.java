@@ -7,12 +7,11 @@ public abstract class Store {
 
     }
 
-    protected void storeProduct(Product product){
+    //Abstract, implemented in PersistentStore
+    protected abstract void storeProduct(Product product);
 
-    }
-
-    protected Product createProduct(String type, String name, int price, int size){
-
+    protected  Product createProduct(String type, String name, int price, int size){
+        
     }
 
     public List<Product> loadProducts(){
