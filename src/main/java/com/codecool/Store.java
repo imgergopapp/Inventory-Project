@@ -19,6 +19,8 @@ public abstract class Store {
     }
 
     public void store(Product product){
+        saveToXml();//not sure about method call order atm.
+        storeProduct();
 
     }
 }
