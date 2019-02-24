@@ -10,7 +10,14 @@ public abstract class Store {
     //Abstract, implemented in PersistentStore
     protected abstract void storeProduct(Product product);
 
-    protected  Product createProduct(String type, String name, int price, int size){
+    protected  Product createProduct(ProductType type, String name, int price, int size){
+        if (type == ProductType.CD){
+            return new CDProduct(name,price,size);
+        }
+        else {
+            return new BookProduct(name,price,size);
+
+        }
         
     }
 
@@ -19,8 +26,8 @@ public abstract class Store {
     }
 
     public void store(Product product){
-        saveToXml();//not sure about method call order atm.
-        storeProduct();
+        saveToXml(product);//not sure about method call order atm.
+        storeProduct(product);
 
     }
 }
