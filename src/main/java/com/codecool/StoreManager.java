@@ -4,6 +4,8 @@ import java.util.List;
 
 public class StoreManager  {
     private StorageCapable storageCapable;
+    private Store store;
+    private ProductType type;
 
     public void addStorage(StorageCapable storage){
         storageCapable = new StorageCapable() {
@@ -15,11 +17,15 @@ public class StoreManager  {
 
             @Override
             public void storeCDProduct(String name, int price, int tracks) {
+                type = ProductType.CD;
+                store.createProduct(type,name,price,tracks);
 
             }
 
             @Override
             public void storeBookProduct(String name, int price, int pages) {
+                type = ProductType.BOOK;
+                store.createProduct(type,name,price,pages);
 
             }
         };
