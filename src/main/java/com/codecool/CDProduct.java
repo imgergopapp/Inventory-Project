@@ -1,11 +1,11 @@
 package com.codecool;
 
-public class CDProduct extends Product{
+public class CDProduct extends Product {
 
     private int numOfTracks;
 
-    public CDProduct(String name, int price, ProductType type, int numOfTracks){
-        super(name,price,type);
+    public CDProduct(String name, int price, ProductType type, int numOfTracks) {
+        super(name, price, type);
         this.numOfTracks = numOfTracks;
     }
 
@@ -15,7 +15,7 @@ public class CDProduct extends Product{
 
     @Override
     public String toString() {
-        return "\nCD name: "  + getName() +
+        return "CD name: " + getName() +
             " | Price: " + getPrice() +
             " | Tracks: " + numOfTracks +
             " | Type: " + getType();
